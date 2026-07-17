@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #0B1120;
+}
+.container {
+    min-height: 100vh;
+    padding: 20px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+ .two {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    color: white;
+}
+ .movie {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+.fa-clapperboard{
+    font-size: 28px;
+    /* color: #4F46E5; */
+}
+.three{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+.three p{
+    font-size: 12px;
+    font-weight: 100;
+}
+.three button{
+    background-color: indigo;
+    border: 1px solid indigo;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+}
+.track {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.track p{
+    font-size: 12px;
+    font-weight: 100;
+}
+.track > h2,
+.track > p {
+    margin: 0;
+}
+.box-1{
+    background-color: rgb(43, 42, 42);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    height: 30vh;
+}
+.add{
+    display: flex;
+    flex-direction: column;  
+}
+.plus{
+    display: flex;
+    color: indigo;
+}
+.four{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 1rem;
+
+}
+.four p{
+    font-size: 12px;
+}
+.genre select{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(43, 42, 42);
+    border: 1px solid grey;
+    color: white;
+    width: 14vw;
+}
+input{
+    background-color: rgb(43, 42, 42);
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+.twos{
+    display: flex;
+    color: white;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.watch{
+    display: flex;
+    flex-direction: column;
+}
+.watch p{
+    font-size: 12px;
+}
+.watch select{
+    border-radius: 5px;
+    padding: 5px;
+    width: 14vw;
+    background-color: rgb(43, 42, 42);
+    border: 1px solid grey;
+    color: white;
+}
+.add-btn button{
+    padding: 7px;
+    border-radius: 5px;
+    background-color: indigo;
+    border: 1px solid indigo;
+    color: white;
+    margin-top: 1rem;
+    width: 14vw;
+}
+.popcorn img{
+    width: 15vw;
+    /* height: 60vh; */
+}
+.box-2{
+    background-color: rgb(43, 42, 42);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    height: auto;
+}
+.fa-gear{
+    cursor: pointer;
+}
+.lists ul{
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+}
+/* .lists{
+    color: white;
+    width: 250px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+} */
+
+.lists {
+    position: absolute;
+    top: 120%;
+    right: 0px;
+    width: 150px;
+    background-color: #1A2235;
+    color: white;
+    border-radius: 8px;
+    display: none;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 5px;
+}
+.lists.click {
+    display: block;
+}
+.settings {
+    position: relative;
+    display: inline-block;
+}
