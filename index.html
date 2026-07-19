@@ -24,13 +24,9 @@
                 <p>Wednesday, 15 July 2026</p>
                 <button>11:45am</button>
                 <div class="settings">
-                <i class="fa-solid fa-gear"></i>
-                <div class="lists">
-                    <ul>
-                        <li>Light Mode</li>
-                        <li>Dark Mode</li>
-                    </ul>
-                </div>
+                    <button class="mode-toggle">
+                        <i class="fa-solid fa-gear"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -43,63 +39,99 @@
                 <div class="four">
                     <div class="title">
                         <p>Movie Title</p>
-                        <input type="text" placeholder="e.g Intersellar">
+                        <input type="text" id="movie-title" placeholder="e.g Intersellar">
                     </div>
                     <div class="genre">
                         <p>Genre</p>
-                        <select name="" id="">
-                            <option value="Select Genre">Action</option>
-                            <option value="Select Genre">Adventure</option>
-                            <option value="Select Genre">Animation</option>
-                            <option value="Select Genre">Biography</option>
-                            <option value="Select Genre">Comedy</option>
-                            <option value="Select Genre">Crime</option>
-                            <option value="Select Genre">Documentary</option>
-                            <option value="Select Genre">Drama</option>
-                            <option value="Select Genre">Family</option>
-                            <option value="Select Genre">Fantasy</option>
-                            <option value="Select Genre">History</option>
-                            <option value="Select Genre">Horror</option>
-                            <option value="Select Genre">Music</option>
-                            <option value="Select Genre">Musical</option>
-                            <option value="Select Genre">Mystery</option>
-                            <option value="Select Genre">Romance</option>
-                            <option value="Select Genre">Sci-Fi</option>
-                            <option value="Select Genre">Sport</option>
-                            <option value="Select Genre">Superhero</option>
-                            <option value="Select Genre">Thriller</option>
-                            <option value="Select Genre">War</option>
-                            <option value="Select Genre">Western</option>
+                        <select name="" id="movie-genre">
+                            <option value="Action">Action</option>
+                            <option value="Adeventure">Adventure</option>
+                            <option value="Animation">Animation</option>
+                            <option value="Biography">Biography</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Crime">Crime</option>
+                            <option value="Documentary">Documentary</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Family">Family</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="History">History</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Music">Music</option>
+                            <option value="Musical">Musical</option>
+                            <option value="Mystery">Mystery</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Sport">Sport</option>
+                            <option value="Superhero">Superhero</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="War">War</option>
+                            <option value="Western">Western</option>
                         </select>
                     </div>
                     <div class="duration">
                         <p>Duration</p>
-                        <input type="number" placeholder="e.g 2hr 49m">
+                        <input type="text" id="movie-duration" placeholder="e.g 2hr 49m">
                     </div>
                     <div class="poster">
                         <p>Poster URL(Optional)</p>
-                        <input type="text" placeholder="e.g https://">
+                        <input type="text" id="movie-poster" placeholder="e.g https://">
                     </div>
                 </div>
                 <div class="twos">
                     <div class="watch">
                         <p>Status</p>
-                        <select name="" id="">
-                            <option value="">Watch</option>
-                            <option value="">Watched</option>
+                        <select name="" id="movie-status">
+                            <option value="Watch">Watch</option>
+                            <option value="Watched">Watched</option>
                         </select>
                     </div>
                     <div class="add-btn">
-                        <button>+ Add Movie</button>
+                        <button id="add-movie-btn">+ Add Movie</button>
                     </div>
                 </div>
             </div>
             <div class="popcorn">
-                    <img src="IMAGE/popcorn.png" alt="">
+                    <img src="images/popcorn.png" alt="">
                 </div>
         </div>
         <div class="box-2">
-            
+            <div class="controls">
+                <div class="left-control">
+                    <input type="search" placeholder="Search your watchlist...">
+                    <span>Filter:</span>
+                    <button>All</button>
+                    <button>Watched</button>
+                    <button>Not Watched</button>
+                </div>  
+                <div class="stats-bar">
+                    <span class="stat">
+                        Total movies: <span id="total-count">0</span>
+                    </span>
+                    <span class="stat">
+                        Watched: <span id="watched-count">0</span>
+                    </span>
+                    <span class="stat">
+                        Not Watched: <span id="unwatched-count">0</span>
+                    </span>
+                </div>
+            </div>
+            <div class="mtable">
+                <table class="movie-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Poster</th>
+                            <th>Movie Title</th>
+                            <th>Genre</th>
+                            <th>Duration</th>
+                            <th>Date Added</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="movie-list"></tbody>
+                </table>
+            </div>
         </div>
     </div>
     <script src="movie.js"></script>

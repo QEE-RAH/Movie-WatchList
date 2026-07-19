@@ -62,7 +62,7 @@ body {
     margin: 0;
 }
 .box-1{
-    background-color: rgb(43, 42, 42);
+    background-color: rgba(169, 164, 255, 0.1);
     border-radius: 10px;
     padding: 15px;
     display: flex;
@@ -92,13 +92,13 @@ body {
 .genre select{
     border-radius: 5px;
     padding: 5px;
-    background-color: rgb(43, 42, 42);
+    background-color: #161b28;
     border: 1px solid grey;
     color: white;
     width: 14vw;
 }
 input{
-    background-color: rgb(43, 42, 42);
+    background-color: #161b28;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 5px;
@@ -123,7 +123,7 @@ input{
     border-radius: 5px;
     padding: 5px;
     width: 14vw;
-    background-color: rgb(43, 42, 42);
+    background-color: #161b28;
     border: 1px solid grey;
     color: white;
 }
@@ -141,12 +141,13 @@ input{
     /* height: 60vh; */
 }
 .box-2{
-    background-color: rgb(43, 42, 42);
+    background-color: rgba(169, 164, 255, 0.1);
     border-radius: 10px;
     padding: 15px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin-top: 1rem;
+    justify-content: space-between;
     height: auto;
 }
 .fa-gear{
@@ -171,7 +172,7 @@ input{
     top: 120%;
     right: 0px;
     width: 150px;
-    background-color: #1A2235;
+    background-color: #161b28;
     color: white;
     border-radius: 8px;
     display: none;
@@ -185,4 +186,212 @@ input{
 .settings {
     position: relative;
     display: inline-block;
+}
+body.light-mode{
+    background-color: #f4f4f8;
+    color: #1a1a1a;
+}
+body.light-mode .box-2,
+body.light-mode .content,
+body.light-mode .box-1 {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+body.light-mode .movie-table th,
+body.light-mode .movie-table td {
+    color: #1a1a1a;
+    border-bottom: 1px solid #ddd;
+}
+body.light-mode .two,
+body.light-mode .three,
+body.light-mode .four,
+body.light-mode .twos,
+body.light-mode .left-control span {
+  color: #1a1a1a;
+}
+
+body.light-mode .three button {
+  background-color: #4F46E5;
+  color: #fff;
+}
+
+body.light-mode input,
+body.light-mode .genre select,
+body.light-mode .watch select {
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  border: 1px solid #d8d8d8;
+}
+
+body.light-mode .stat {
+  color: #1a1a1a;
+}
+body.light-mode .box-1,
+body.light-mode .box-2,
+body.light-mode .content {
+  border: 1px solid #e5e5ec;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+body.light-mode .left-control button {
+  background-color: #f4f4f8;
+  border-color: #d8d8e8;
+}
+
+body.light-mode .left-control button:active {
+  background-color: #4F46E5;
+  color: #fff;
+}
+
+body.light-mode .stats-bar {
+  background-color: #f4f4f8;
+  border-color: #d8d8e8;
+}
+
+body.light-mode .movie-table thead {
+  background-color: #eef0fb;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 16px;
+    /* background-color: #0f1420; */
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.left-control{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+.left-control input{
+    background-color: #161b28;
+    border: 1px solid #2a3040;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #e5e7eb;
+    outline: none;
+    width: 44%;
+}
+.left-control span{
+    color: #fff;
+    font-weight: 600;
+}
+.left-control button{
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid #2a3040;
+    background: none;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+.left-control button:active{
+    background-color: #7c3aed;
+    color: #fff;
+    border-color: #7c3aed;
+}
+.stats-bar{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #6279b326;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+.stat{
+    color: #d1d5db;
+    font-size: 14px;
+    border-right: 1px solid #3a4040;
+    padding-right: 16px;
+}
+.movie-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+.movie-table thead{
+    background-color: #a2aab827;
+}
+.movie-table th{
+    text-align: left;
+    padding: 12px 16px;
+    color: #d1d5db;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 1px solid #2a3040;
+}
+.movie-table td{
+    padding: 12px 16px;
+    color: #d1d5db;
+    font-size: 14px;
+    border-bottom: 1px solid #2a3040;
+}
+.status-badge .fa-circle {
+    font-size: 8px;
+    margin-right: 4px;
+}
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-badge .fa-circle {
+  font-size: 8px;
+}
+
+.status-badge.watched {
+  background-color: rgba(34,197,94,0.15);
+  color: #22c55e;
+  border: 1px solid rgba(34,197,94,0.3);
+}
+
+.status-badge.not-watched {
+  background-color: rgba(239,68,68,0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239,68,68,0.3);
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(34,197,94,0.4);
+  background: none;
+  color: #22c55e;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.action-btn:hover {
+  background-color: rgba(34,197,94,0.1);
+}
+
+.delete-btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(239,68,68,0.4);
+  background: none;
+  color: #ef4444;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.delete-btn:hover {
+  background-color: rgba(239,68,68,0.1);
 }
