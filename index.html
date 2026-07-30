@@ -20,9 +20,9 @@
                 </div>
             </div>
             <div class="three">
-                <i class="fa-regular fa-clock"></i>
-                <p>Wednesday, 15 July 2026</p>
-                <button>11:45am</button>
+                <!-- <i class="fa-regular fa-clock"></i> -->
+                <p id="current-date">Wednesday, 15 July 2026</p>
+                <button id="current-time">11:45am</button>
                 <div class="settings">
                     <button class="mode-toggle">
                         <i class="fa-solid fa-gear"></i>
@@ -81,12 +81,12 @@
                     <div class="watch">
                         <p>Status</p>
                         <select name="" id="movie-status">
-                            <option value="Watch">Watch</option>
+                            <option value="Not Watched">Not Watched</option>
                             <option value="Watched">Watched</option>
                         </select>
                     </div>
                     <div class="add-btn">
-                        <button id="add-movie-btn">+ Add Movie</button>
+                        <button type="button" id="add-movie-btn">+ Add Movie</button>
                     </div>
                 </div>
             </div>
@@ -99,19 +99,19 @@
                 <div class="left-control">
                     <input type="search" placeholder="Search your watchlist...">
                     <span>Filter:</span>
-                    <button>All</button>
-                    <button>Watched</button>
-                    <button>Not Watched</button>
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn active">Not Watched</button>
+                    <button class="filter-btn active"> Watched</button>
                 </div>  
                 <div class="stats-bar">
                     <span class="stat">
-                        Total movies: <span id="total-count">0</span>
+                        Total movies: <span id="total-count"></span>
                     </span>
                     <span class="stat">
-                        Watched: <span id="watched-count">0</span>
+                        Watched: <span id="watched-count"></span>
                     </span>
                     <span class="stat">
-                        Not Watched: <span id="unwatched-count">0</span>
+                        Not Watched: <span id="unwatched-count"></span>
                     </span>
                 </div>
             </div>

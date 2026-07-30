@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Filter Age:</p>
+    <p id="demo"></p>
+    <script>
+        // const age = [12, 18, 19, 35, 37];
+        // document.getElementById("demo").innerHTML = age.filter(checkAdult);
+        // const result = age.filter(checkAdult);
+        // function checkAdult(age){
+        //     return age >= 18
+        // }
+
+//         let movies = [];
+//         const movie = {
+//     title: titleInput.value,
+//     genre: genreInput.value,
+//     watched: watchedCheckbox.checked
+// };
+// movies.push(movie);
+// const watchedMovies = movies.filter(movie => movie.watched);
+
+
+// <option>watched: status.value === "Watched"</option>
+
+
+
+
+const filterValue = filter.value;
+const filteredMovies = movies.filter(function(movie) {
+    return movie.status === filterValue;
+});
+if (filterValue === "All") {
+    displayMovies(movies);
+} else {
+    const filteredMovies = movies.filter(movie => movie.status === filterValue);
+    displayMovies(filteredMovies);
+}
+    </script>
+</body>
+</html>
